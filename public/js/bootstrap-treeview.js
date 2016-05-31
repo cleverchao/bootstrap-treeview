@@ -1120,7 +1120,7 @@
 				modifier += 'i';
 			}
 
-			results = this.findNodes(pattern, modifier);
+			results = this.findNodes(pattern, modifier, options.attr);
 
 			// Add searchResult property to all matching nodes
 			// This will be used to apply custom styles
