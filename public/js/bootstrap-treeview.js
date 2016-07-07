@@ -58,6 +58,7 @@
 		showCheckbox: false,
 		showTags: false,
 		multiSelect: false,
+		toggleSelectedState: true,
 
 		// Event handlers
 		onNodeChecked: undefined,
@@ -336,7 +337,11 @@
 		else {
 			
 			if (node.selectable) {
-				this.toggleSelectedState(node, _default.options);
+				if(this.options.toggleSelectedState){
+					this.toggleSelectedState(node, _default.options);
+				}else{
+					this.setSelectedState(node, true, _default.options);
+				}
 			} else {
 				this.toggleExpandedState(node, _default.options);
 			}
